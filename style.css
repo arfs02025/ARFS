@@ -1,0 +1,48 @@
+body {
+    background: linear-gradient(to bottom right, #b7d6ad, #d2ecdb); /* خلفية لطيفة */
+    margin: 0;
+    padding: 0;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  }
+  
+  .waste-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    border: none;
+    box-shadow: none; /* مسطحة بدون ظل */
+    background: transparent;
+    border-radius: 12px;
+    overflow: hidden;
+    transform-style: preserve-3d;
+  }
+  
+  .waste-card:hover {
+    transform: scale(1.05) rotateY(10deg) rotateX(5deg); /* بروز ودوران خفيف */
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.25); /* ظل كبير عند التحويم */
+  }
+  
+  .waste-card:active {
+    transform: scale(1.05) rotateY(10deg) rotateX(5deg); /* يبقى ثابت عند الضغط */
+    box-shadow: 0 25px 50px rgba(255, 41, 41, 0.35); /* ظل أعمق عند الضغط */
+  }
+  
+  .waste-card model-viewer {
+    border: none;
+    outline: none;
+  }
+
+.waste-img {
+  transition: all 0.3s ease;
+  position: relative;
+  z-index: 1;
+}
+
+/* عند الضغط */
+.waste-img.clicked {
+  transform: scale(1.5) translateY(-20px);
+  box-shadow: 0 20px 40px rgba(0, 200, 83, 0.6);
+  z-index: 30;
+}
+
+
+
